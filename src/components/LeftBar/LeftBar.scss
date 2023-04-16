@@ -1,0 +1,115 @@
+// .li-title{
+//     @apply font-mont-bold text-2xl text-darkGrey;
+// }
+// .li-title {
+//     @apply font-mont-bold text-2xl text-darkGrey;
+// }
+
+// .test{
+//     fill: red;
+// }
+
+.link-my-courses {
+  @apply flex mb-8;
+
+  &:hover .icon {
+    background-image: url('../../img/LeftBar/myCoursesActive.svg');
+  }
+  .icon {
+    @apply w-6 h-6 mr-2;
+    background-image: url('../../img/LeftBar/myCoursesGrey.svg');
+  }
+
+  .iconActive {
+    @apply w-6 h-6 mr-2;
+    background-image: url('../../img/LeftBar/myCoursesActive.svg');
+  }
+}
+
+.link-all-courses {
+  @apply flex mb-8;
+
+  &:hover .icon {
+    background-image: url('../../img/LeftBar/allCoursesActive.svg');
+  }
+  .icon {
+    @apply w-6 h-6 mr-2;
+    background-image: url('../../img/LeftBar/allCoursesGrey.svg');
+  }
+
+  .iconActive {
+    @apply w-6 h-6 mr-2;
+    background-image: url('../../img/LeftBar/allCoursesActive.svg');
+  }
+}
+
+
+
+.link-all-courses {
+  @apply flex mb-8;
+
+  &:hover .icon {
+    background-image: url('../../img/LeftBar/allCoursesActive.svg');
+  }
+  .icon {
+    @apply w-6 h-6 mr-2;
+    background-image: url('../../img/LeftBar/allCoursesGrey.svg');
+  }
+
+  .iconActive {
+    @apply w-6 h-6 mr-2;
+    background-image: url('../../img/LeftBar/allCoursesActive.svg');
+  }
+}
+.link-all-courses {
+  @apply flex mb-8;
+
+  &:hover .icon {
+    background-image: url('../../img/LeftBar/allCoursesActive.svg');
+  }
+  .icon {
+    @apply w-6 h-6 mr-2;
+    background-image: url('../../img/LeftBar/allCoursesGrey.svg');
+  }
+
+  .iconActive {
+    @apply w-6 h-6 mr-2;
+    background-image: url('../../img/LeftBar/allCoursesActive.svg');
+  }
+}
+
+
+.link-news {
+  @apply flex mb-8;
+
+  &:hover .icon {
+    background-image: url('../../img/LeftBar/newsActive.svg');
+  }
+  .icon {
+    @apply w-6 h-6 mr-2;
+    background-image: url('../../img/LeftBar/newsGrey.svg');
+  }
+
+  .iconActive {
+    @apply w-6 h-6 mr-2;
+    background-image: url('../../img/LeftBar/newsActive.svg');
+  }
+}
+
+
+.link-all-courses {
+  @apply flex;
+
+  &:hover .icon {
+    background-image: url('../../img/LeftBar/allCoursesActive.svg');
+  }
+  .icon {
+    @apply w-6 h-6 mr-2;
+    background-image: url('../../img/LeftBar/allCoursesGrey.svg');
+  }
+
+  .iconActive {
+    @apply w-6 h-6 mr-2;
+    background-image: url('../../img/LeftBar/allCoursesActive.svg');
+  }
+}
