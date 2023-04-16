@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 
 const LeftBar = () => {
   const pathName = window.location.pathname;
+  console.log(pathName)
 
   return (
     <div className='w-1/4 h-full shadow-lg p-11 box-border'>

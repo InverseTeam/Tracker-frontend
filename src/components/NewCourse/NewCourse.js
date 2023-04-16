@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import folder from '../../img/Course/Folder.svg';
 import ListCategories from './ListCategories/ListCategories';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { postNewCourse } from './postNewCourse';
 
 const NewCourse = () => {
+  const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [place, setPlace] = useState('');
   const [description, setDescription] = useState('');
@@ -12,12 +14,19 @@ const NewCourse = () => {
   const [time, setTime] = useState('');
 
   const teacherData = useSelector((state) => state.user.user);
-  console.log(teacherData);
+  // console.log(teacherData);
   
   const courseData = {
     name: name,
     description: description,
+    category: 4,
+    groups: [5],
+    place: place
+
   };
+  // console.log(courseData);
+
+
 
   return (
     <div className='flex flex-col'>
@@ -33,16 +42,16 @@ const NewCourse = () => {
             className='input_text mb-6'
             type='text'
             placeholder='Название курса'
-            // value={name}
-            // onChange={(e) => setName(e.target.value)}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
           <span className='font-mont-semibold  text-darkGray ml-5'>Место</span>
           <input
             className='input_text mb-6'
             type='text'
             placeholder='Место проведения'
-            // value={name}
-            // onChange={(e) => setName(e.target.value)}
+            value={place}
+            onChange={(e) => setPlace(e.target.value)}
           />
           <span className='font-mont-semibold  text-darkGray ml-5'>
             Описание
@@ -51,8 +60,8 @@ const NewCourse = () => {
             className='textarea mb-6 h-40 resize-none '
             type='text'
             placeholder='Краткая информация о курсе'
-            // value={name}
-            // onChange={(e) => setName(e.target.value)}
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
           />
           <input
             type='file'
@@ -65,7 +74,7 @@ const NewCourse = () => {
           <label for='file'>
             <div className='btn-additional flex items-center justify-center mb-4'>
               <img src={folder} className='mx-3' />
-              <span>Прикрепить обложку</span>
+              <span>Прикрепить шаблон докуметов</span>
             </div>
           </label>
           <span>Файлы PDF</span>
@@ -160,7 +169,7 @@ const NewCourse = () => {
         onChange={(e) => setTime(e.target.value)}
       />
 
-      <button className='btn-main mb-10'>Опубликовать</button>
+      <button className='btn-main mb-10' onClick={() => postNewCourse(dispatch, courseData)}>Опубликовать</button>
     </div>
   );
 };
