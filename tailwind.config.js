@@ -9,11 +9,17 @@ module.exports = {
       },
       width:{
         96: '96',
+        396: '396',
+      },
+      height: {
+        60: '60',
       },
       colors: {
         mainBlue: '#7CA4D9',
         black: '#191919',
-        darkGrey: '#888A8C',
+        darkGray: '#888A8C',
+        lightGray: '#F8F9FB',
+        blueGray: '#E3ECF6',
       },
       transitionTimingFunction: {
         DEFULT: 'ease-in-out',

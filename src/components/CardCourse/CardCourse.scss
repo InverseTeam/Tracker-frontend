@@ -1,0 +1,10 @@
+
+
+.description {
+//   @apply font-mont-semibold text-xs text-darkGray mb-3;
+
+  -webkit-line-clamp: 1; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden;
+}
