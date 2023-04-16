@@ -9,7 +9,7 @@ const Layout = () => {
   const auth = useAuth();
 
   return auth ? (
-    <div className='w-screen h-screen overflow-auto flex'>
+    <div className='w-screen h-screen overflow-auto flex justify-between'>
       <LeftBar />
       <Outlet />
     </div>

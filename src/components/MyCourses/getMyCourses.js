@@ -1,5 +1,5 @@
 import { instanceLogged } from '../../axios';
-import myCoursesSlice from '../../store/slices/myCourses';
+import {myCoursesSlice} from '../../store/slices/myCourses';
 
 export const getMyCourses = async (dispatch, len) => {
   if (len > 0) {

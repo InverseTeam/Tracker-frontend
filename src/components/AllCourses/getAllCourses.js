@@ -2,7 +2,6 @@ import { instanceLogged } from '../../axios';
 import {coursesSlice} from '../../store/slices/courses';
 
 export const getAllCourses = async (dispatch, len) => {
-  console.log(len)
   if (len > 0) {
     return;
   }

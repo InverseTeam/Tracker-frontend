@@ -11,7 +11,7 @@ const LeftBar = () => {
   const pathName = window.location.pathname;
 
   return (
-    <div className='w-72 h-full shadow-lg p-11 box-border'>
+    <div className='w-1/4 h-full shadow-lg p-11 box-border'>
       {/* <AllCoursesIcon /> */}
       {/* <svg src={allcoursesActive} className='test'/> */}
       {/* <img src={vector} className='test'/> */}
