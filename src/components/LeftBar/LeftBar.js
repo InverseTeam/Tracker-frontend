@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import group from '../../img/LeftBar/Group.svg';
 import vector from '../../img/LeftBar/Vector.svg';
 import allcoursesActive from '../../img/LeftBar/allCoursesActive.svg';
@@ -9,7 +9,12 @@ import { Link } from 'react-router-dom';
 
 const LeftBar = () => {
   const pathName = window.location.pathname;
-  console.log(pathName)
+  console.log(pathName);
+
+  const [myCourses, setMyCourses] = useState(false);
+  const [allCourses, setAllCourses] = useState(true);
+  const [news, setNews] = useState(false);
+  const [profile, setProfile] = useState(false);
 
   return (
     <div className='w-1/4 h-full shadow-lg p-11 box-border'>
@@ -20,8 +25,17 @@ const LeftBar = () => {
       <img src={title} className='mb-20' />
       <ul className='w-full'>
         <li>
-          <Link to='/my-courses' className='link-my-courses'>
-            {pathName === '/my-courses' ? (
+          <Link
+            to='/my-courses'
+            className='link-my-courses'
+            onClick={() => {
+              setMyCourses(true);
+              setAllCourses(false);
+              setNews(false);
+              setProfile (false);
+            }}
+          >
+            {myCourses ? (
               <div className=''>
                 <div className='iconActive' />
                 <span className='font-mont-bold text-2xl  text-mainBlue'>
@@ -39,8 +53,13 @@ const LeftBar = () => {
           </Link>
         </li>
         <li>
-          <Link to='/courses' className='link-all-courses'>
-            {pathName === '/courses' ? (
+          <Link to='/courses' className='link-all-courses' onClick={() => {
+              setMyCourses(false);
+              setAllCourses(true);
+              setNews(false);
+              setProfile (false);
+            }}>
+            {allCourses ? (
               <>
                 <div className='iconActive' />
                 <span className='font-mont-bold text-2xl  text-mainBlue'>
